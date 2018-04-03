@@ -7,7 +7,10 @@ SELECT * FROM orders JOIN line_items ON
 line_items.id = orders.id;
 
 3. Which warehouses have cheetos?
-
+SELECT * FROM warehouse_product JOIN products ON
+products.id = warehouse_product.product_id
+JOIN warehouse ON warehouse.id = warehouse_product.warehouse_id
+WHERE products.description = 'cheetos'; 
 
 4. Which warehouses have diet pepsi?
 
