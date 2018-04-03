@@ -25,7 +25,7 @@ JOIN orders ON orders.address_id = addresses.id
 GROUP BY customers.first_name;
 
 6. How many customers do we have?
-
+SELECT count(customers.id) FROM customers;
 
 7. How many products do we carry?
 
