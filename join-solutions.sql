@@ -13,7 +13,10 @@ JOIN warehouse ON warehouse.id = warehouse_product.warehouse_id
 WHERE products.description = 'cheetos'; 
 
 4. Which warehouses have diet pepsi?
-
+SELECT * FROM warehouse_product JOIN products ON
+products.id = warehouse_product.product_id
+JOIN warehouse ON warehouse.id = warehouse_product.warehouse_id
+WHERE products.description = 'diet pepsi';
 
 5. Get the number of orders for each customer. NOTE: It is OK if those without orders are not included in results.
 
