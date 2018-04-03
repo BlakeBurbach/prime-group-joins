@@ -3,7 +3,8 @@ SELECT * FROM addresses JOIN customers ON
 customers.id = addresses.customer_id;
 
 2. Get all orders and their line items.
-
+SELECT * FROM orders JOIN line_items ON
+line_items.id = orders.id;
 
 3. Which warehouses have cheetos?
 
